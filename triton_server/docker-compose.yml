@@ -1,0 +1,19 @@
+services:
+  asr:
+    image: soar97/triton-fun-asr:25.06
+    shm_size: '1gb'
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+      - "8002:8002"
+    environment:
+      - PYTHONIOENCODING=utf-8
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ['0']
+              capabilities: [gpu]
+    command: >
+      /bin/bash -c "git clone https://github.com/yuekaizhang/Fun-ASR-vllm.git && cd Fun-ASR-vllm/triton_server && bash run_server.sh"

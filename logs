@@ -1,0 +1,19 @@
+Downloading [model.pt]: 100%|██████████| 1.98G/1.98G [00:55<00:00, 38.2MB/s]
+Processing 20 items: 100%|██████████| 20.0/20.0 [00:56<00:00, 2.81s/it]tail 100 triton_server-asr-1
+2026-02-12 09:33:54,841 - modelscope - INFO - Download model 'FunAudioLLM/Fun-ASR-Nano-2512' successfully.
+WARNING:root:trust_remote_code: True
+INFO:root:use_lora: False
+INFO:root:rank: 0, model is builded.
+INFO:root:Loading pretrained params from /root/.cache/modelscope/hub/models/FunAudioLLM/Fun-ASR-Nano-2512/model.pt
+INFO:root:ckpt: /root/.cache/modelscope/hub/models/FunAudioLLM/Fun-ASR-Nano-2512/model.pt
+INFO:root:scope_map: ['module.', 'None'] 1.98G/1.98G [00:55<00:00, 37.8MB/s]
+INFO:root:excludes: None
+INFO:root:Loading ckpt: /root/.cache/modelscope/hub/models/FunAudioLLM/Fun-ASR-Nano-2512/model.pt, status: <All keys matched successfully>
+INFO:root:Loading vLLM model from yuekai/Fun-ASR-Nano-2512-vllm
+Loading remote code successfully: model
+INFO 02-12 09:34:39 [utils.py:253] non-default args: {'enable_prompt_embeds': True, 'dtype': 'bfloat16', 'gpu_memory_utilization': 0.4, 'disable_log_stats': True, 'model': 'yuekai/Fun-ASR-Nano-2512-vllm'}
+INFO 02-12 09:34:54 [model.py:514] Resolved architecture: Qwen3ForCausalLM
+INFO 02-12 09:34:54 [model.py:2002] Downcasting torch.float32 to torch.bfloat16.
+INFO 02-12 09:34:54 [model.py:1661] Using max model len 40960
+INFO 02-12 09:34:55 [scheduler.py:230] Chunked prefill is enabled with max_num_batched_tokens=8192.
+WARNING 02-12 09:35:10 [system_utils.py:136] We must use the `spawn` multiprocessing start method. Overriding VLLM_WORKER_MULTIPROC_METHOD to 'spawn'. See https://docs.vllm.ai/en/latest/usage/troubleshooting.html#python-multiprocessing for more information. Reasons: CUDA is initialized

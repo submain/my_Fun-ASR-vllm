@@ -1,0 +1,7 @@
+vllm==0.13.0
+WeTextProcessing
+kaldialign
+torch
+torchaudio
+transformers
+funasr>=1.2.7

@@ -1,0 +1,22 @@
+services:
+  asr:
+    image: soar97/triton-fun-asr:25.06
+    shm_size: '1gb'
+    ports:
+      - "8000:8000"
+      - "8011:8011"
+      - "8002:8002"
+    volumes:
+      - ..:/workspace/Fun-ASR-vllm
+    environment:
+      - PYTHONIOENCODING=utf-8
+      - HF_ENDPOINT=https://hf-mirror.com
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ['2']
+              capabilities: [gpu]
+    command: >
+      /bin/bash -c "cd /workspace/Fun-ASR-vllm/triton_server && bash run_server.sh"
