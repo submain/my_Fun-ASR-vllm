@@ -1,0 +1,4 @@
+1、使用文件夹下的config.pbtxt替换Fun-ASR-vllm/triton_server/model_repo_funasr/funasr/config.pbtxt
+2、使用文件夹下的funasr_wrapper.py替换Fun-ASR-vllm/triton_server/model_repo_funasr/funasr/1/funasr_wrapper.py
+3、使用文件夹下的model.py替换Fun-ASR-vllm/triton_server/model_repo_funasr/funasr/1/model.py
+4、重启容器
